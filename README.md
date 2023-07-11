@@ -76,7 +76,7 @@ def status():
     return jsonify({"status": "OK"})
 ```
 
-* The import statement `from api.v1.views import app_views` was changed to `from . import app_views`.
+* The import statement `from api.v1.views import app_views` was switched to `from . import app_views`.
 <br>
 
 ### OUTPUT
