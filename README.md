@@ -1,6 +1,5 @@
 # Project (0x01. Fix my code)
-
-
+<br>
 
 ## Task[0]: Server status
 
@@ -41,9 +40,9 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, threaded=True)
 ```
 
-* The import statement was switched from `from api.v1.views import app_views` to `from views.index import status`.
-* The blueprint registration `app.register_blueprint(app_views)` was removed.
-* The server was updated to run on `port 8080` instead of `port 5000`.
+* Import statement was switched from `from api.v1.views import app_views` to `from views.index import status`.
+* Blueprint registration `app.register_blueprint(app_views)` was removed.
+* Switched from `port 5000` to `port 8080` for WSGI server compatibility, allowing differentiation between development and production environments.
 <br>
 
 **In /api/v1/views/__init__.py**
@@ -76,17 +75,17 @@ def status():
     return jsonify({"status": "OK"})
 ```
 
-* The import statement `from api.v1.views import app_views` was switched to `from . import app_views`.
+* The import statement `from api.v1.views import app_views` was changed to `from . import app_views`.
 <br>
 
 ### OUTPUT
 ```
 root@f82226a41eb6:~/Fix_My_Code_Challenge/status_server/api/v1# python -m api.v1.app
-   * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+   * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
  ...
 ```
 ```
-root@f82226a41eb6:~/Fix_My_Code_Challenge/status_server/api/v1# curl -XGET http://0.0.0.0:5000/api/v1/status
+root@f82226a41eb6:~/Fix_My_Code_Challenge/status_server/api/v1# curl -XGET http://0.0.0.0:8080/api/v1/status
 {"error": "Not found"}
 root@f82226a41eb6:~/Fix_My_Code_Challenge/status_server/api/v1#
 ```
