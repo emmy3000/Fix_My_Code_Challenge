@@ -21,7 +21,7 @@ My code is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/tree/m
 The following changes were made to correct the source code of the status server:
 <br>
 
-**/api/v1/app.py file**
+**In /api/v1/app.py file**
 ```
 #!/usr/bin/python3
 """
@@ -41,12 +41,12 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8080, threaded=True)
 ```
 
-* The import statement was changed from `from api.v1.views import app_views to from views.index import status`.
-* The blueprint registration `app.register_blueprint(app_views) was removed`.
+* The import statement was switched from `from api.v1.views import app_views` to `from views.index import status`.
+* The blueprint registration `app.register_blueprint(app_views)` was removed.
 * The server was updated to run on `port 8080` instead of `port 5000`.
 <br>
 
-**/api/v1/views/__init__.py**
+**In /api/v1/views/__init__.py**
 ```
 #!/usr/bin/python3
 """ Views module
@@ -57,11 +57,11 @@ app_views = Blueprint("app_views", __name__, url_prefix="/api/v1")
 from .index import *
 ```
 
-* he import statement `from api.v1.views.index import * was changed to from .index import *`.
+* he import statement `from api.v1.views.index import *` was changed to `from .index import *`.
 <br>
 
 
-**/api/v1/views/index.py**
+**In /api/v1/views/index.py**
 ```
 #!/usr/bin/python3
 """ Index view
