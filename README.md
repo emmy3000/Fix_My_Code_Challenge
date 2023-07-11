@@ -17,7 +17,7 @@ My code is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/tree/m
 ### Fixing the Status Server
 The following changes were made to correct the source code of the status server:<br>
 
-** /api/v1 file **
+**/api/v1 file**
 ```
 ```python
 #!/usr/bin/python3
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 * The blueprint registration `app.register_blueprint(app_views) was removed`.
 * The server was updated to run on `port 8080` instead of `port 5000`.<br>
 
-** views/init.py **
+**views/init.py**
 ```
 #!/usr/bin/python3
 """ Views module
@@ -56,7 +56,7 @@ from .index import *
 * he import statement `from api.v1.views.index import * was changed to from .index import *`.<br>
 
 
-** views/index.py **
+**views/index.py**
 ```
 #!/usr/bin/python3
 """ Index view
