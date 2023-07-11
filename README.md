@@ -1,9 +1,7 @@
 # Project (0x01. Fix my code)
 
 
-## Task[0]
-
-**0.Server status**
+## Task[0]: Server status
 
 I just started a new Flask project and the first thing I’m putting in place is a route for the status of my API (super important for a load balancer implementation).
 
@@ -11,13 +9,13 @@ But I don’t know why it’s not working…
 
 Could you look at it and fix it please?
 
-My code is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/tree/master/status_server/)
+My code is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/tree/master/status_server/).<br>
 
 
 ## SOLUTION
 
 ### Fixing the Status Server
-The following changes were made to correct the source code of the status server:
+The following changes were made to correct the source code of the status server:<br>
 
 ** /api/v1 file **
 ```
@@ -42,7 +40,7 @@ if __name__ == "__main__":
 
 * The import statement was changed from `from api.v1.views import app_views to from views.index import status`.
 * The blueprint registration `app.register_blueprint(app_views) was removed`.
-* The server was updated to run on `port 8080` instead of `port 5000`.
+* The server was updated to run on `port 8080` instead of `port 5000`.<br>
 
 ** views/init.py **
 ```
@@ -55,7 +53,7 @@ app_views = Blueprint("app_views", __name__, url_prefix="/api/v1")
 from .index import *
 ```
 
-* he import statement `from api.v1.views.index import * was changed to from .index import *`.
+* he import statement `from api.v1.views.index import * was changed to from .index import *`.<br>
 
 
 ** views/index.py **
