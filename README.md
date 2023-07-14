@@ -14,7 +14,7 @@ My code is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/tree/m
 
 The following changes were made to correct the source code of the status server:
 
-* In /api/v1/app.py file
+* In app.py
 ```python
 #!/usr/bin/python3
 """
@@ -87,7 +87,7 @@ I love geometry!
 Look [my square](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/blob/master/square.py), it’s perfect? No? Should I change something?
 
 ### Solution
-In ~/Fix_My_Code_Challenge/square.py
+* In square.py
 ```python
 #!/usr/bin/python3
 
@@ -150,6 +150,7 @@ Thank you!
 Fixing the User Class
 
 The following changes were made to correct the User class code:
+* In user.py
 ```python
 #!/usr/bin/python3
 """ 
