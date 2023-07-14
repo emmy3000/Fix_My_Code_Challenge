@@ -51,8 +51,8 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port, threaded=True)
 ```
 
-* Imported the status function from the views.index module.
-* Added the import statement for the socket module.
+* Imported the status function from the `views.index module`.
+* Added the `import` statement for the `socket` module.
 * Updated the port configuration to use a default port of 5000.
 * Added code to check if the default port is already in use and switch to an alternative port (e.g., 8080).
 * Added initilization file within sub-directories to define the package's namespace and perform any necessary configurations.
@@ -74,7 +74,7 @@ root@f82226a41eb6:~/Fix_My_Code_Challenge/status_server# python3 -m api.v1.app
  * Running on http://172.17.0.6:8080 (Press CTRL+C to quit)
 127.0.0.1 - - [14/Jul/2023 12:29:50] "GET /api/v1/status HTTP/1.1" 200 -
 ```
-You should see the server running on http://0.0.0.0:<port>/. The actual port used will depend on whether the default port is available or an alternative port had to be used.
+You should see the server running on `http://0.0.0.0:<port>/*`. The actual port used will depend on whether the default port is available or an alternative port had to be used.
 
 To test the server status, you can use the following command:
 ```bash
@@ -82,3 +82,59 @@ root@f82226a41eb6: curl -XGET http://localhost:<port>/api/v1/status
 {"status":"OK"}
 ```
 Please note that you need to replace <port> with the actual port number where the server is running.
+
+
+## Task[1]
+I love geometry!
+
+Look [my square](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/blob/master/square.py), it’s perfect? No? Should I change something?
+
+### Solution
+* In ~/Fix_My_Code_Challenge/square.py
+```python
+#!/usr/bin/python3
+
+class Square:
+    def __init__(self, width=0, height=0):
+        self.width = width
+        self.height = height
+
+    def area_of_my_square(self):
+        """Area of the square"""
+        return self.width * self.height
+
+    def perimeter_of_my_square(self):
+        """Perimeter of the square"""
+        return (self.width + self.height) * 2
+
+    def __str__(self):
+        return "{}/{}".format(self.width, self.height)
+
+if __name__ == "__main__":
+    s = Square(width=12, height=9)
+    print(s)
+    print(s.area_of_my_square())
+    print(s.perimeter_of_my_square())
+```
+Here are the changes made:
+
+* Renamed the class `square` to `Square` (following Python naming conventions).
+* Added proper indentation to the class and its methods.
+* Changed the method name `PermiterOfMySquare` to `perimeter_of_my_square` (following Python naming conventions).
+* Fixed the `__init__` method to initialize the width and height attributes correctly.
+* Fixed the calculation of the area in the `area_of_my_square` method.
+* Fixed the calculation of the perimeter in the `perimeter_of_my_square` method.
+
+### Output
+To execute the corrected code, you can save it in a file named `square.py` and run it using the `python3` command.
+```bash
+python3 square.py
+```
+
+This will execute the code and display the output:
+```bash
+12/9
+108
+42
+```
+The first line represents the string representation of the `Square` object, followed by the calculated area and perimeter of the square.
