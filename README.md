@@ -84,7 +84,7 @@ root@f82226a41eb6: curl -XGET http://localhost:<port>/api/v1/status
 Please note that you need to replace <port> with the actual port number where the server is running.
 
 
-## Task[1]
+## Task[1]: My square
 I love geometry!
 
 Look [my square](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/blob/master/square.py), it’s perfect? No? Should I change something?
@@ -138,3 +138,62 @@ This will execute the code and display the output:
 42
 ```
 The first line represents the string representation of the `Square` object, followed by the calculated area and perimeter of the square.
+
+
+## Task[2]: User Model
+I’m running into a serious problem!
+
+I just start my OOP project and nothing works…
+
+Could you help me please? My code is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/blob/master/user.py).
+
+Thank you!
+
+### Solution
+Fixing the User Class
+
+The following changes were made to correct the User class code:
+```python
+#!/usr/bin/python3
+""" 
+User class
+"""
+
+class User():
+    """ Documentation """
+
+    def __init__(self):
+        """ Documentation """
+        self.__email = None
+
+    @property
+    def email(self):
+        """ Documentation """
+        return self.__email
+    
+    @email.setter
+    def email(self, value):
+        """ Documentation """
+        if type(value) is not str:
+            raise TypeError("email must be a string")
+        self.__email = value
+   
+    
+if __name__ == "__main__":
+    u = User()
+    u.email = "john@snow.com"
+    print(u.email)
+```
+* The decorator `@email.setter` was moved below the `@property` decorator.
+* The `email` setter method now correctly sets the value of `self.__email` attribute when assigning a new email value.
+* Added a type check to ensure that the assigned email value is a string. If the value is not a string, a `TypeError` is raised.
+
+### Output
+After making the above changes, you can run the following command to execute the code:
+```bash
+root@f82226a41eb6:~/Fix_My_Code_Challenge# python3 user.py
+john@snow.com
+```
+The code creates a User object, assigns the email "<u>"john@snow.com"</u>"  to it, and then prints the email value.
+
+The corrected code now properly sets and retrieves the email value without any errors.
