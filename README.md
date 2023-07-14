@@ -82,7 +82,7 @@ root@f82226a41eb6: curl -XGET http://localhost:<port>/api/v1/status
 {"status":"OK"}
 ```
 Please note that you need to replace <port> with the actual port number where the server is running.
-<br>
+<br><br>
 
 ## Task[1]: My square
 I love geometry!
@@ -138,7 +138,7 @@ This will execute the code and display the output:
 42
 ```
 The first line represents the string representation of the `Square` object, followed by the calculated area and perimeter of the square.
-<br>
+<br><br>
 
 ## Task[2]: User Model
 I’m running into a serious problem!
