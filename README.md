@@ -11,9 +11,10 @@ My code is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/tree/m
 
 ### Solution
 * Fixing the Status Server
+
 The following changes were made to correct the source code of the status server:
 
-In /api/v1/app.py file
+* In /api/v1/app.py file
 ```python
 #!/usr/bin/python3
 """
@@ -47,12 +48,12 @@ if __name__ == "__main__":
 
     app.run(host="0.0.0.0", port=port, threaded=True)
 ```
-* Imported the status function from the views.index module.
-* Added the import statement for the socket module.
+* Imported the `status` function from the `views.index module`.
+* Added the `import` statement for the `socket` module.
 * Updated the port configuration to use a default port of 5000.
 * Added code to check if the default port is already in use and switch to an alternative port(e.g., 8080).
 * Added initilization file within sub-directories to define the package's namespace and perform any necessary configurations.
-* Started the Flask application with the updated host and port.
+* Started the Flask application with the updated `host` and `port`.
 
 ### Output
 After making the above changes, you can run the following command to start the server:
