@@ -71,14 +71,14 @@ root@f82226a41eb6:~/Fix_My_Code_Challenge/status_server# python3 -m api.v1.app
  * Running on http://172.17.0.6:8080 (Press CTRL+C to quit)
 127.0.0.1 - - [14/Jul/2023 12:29:50] "GET /api/v1/status HTTP/1.1" 200 -
 ```
-You should see the server running on http://0.0.0.0:<port>/*. The actual port used will depend on whether the default port is available or an alternative port had to be used.
+You should see the server running on `http://0.0.0.0:<port>/*`. The actual `port` used will depend on whether the default `port` is available or an alternative port had to be used.
 
 To test the server status, you can use the following command:
 ```python
-root@f82226a41eb6: curl -XGET http://localhost:<port>/api/v1/status
+root@f82226a41eb6: curl -XGET http://localhost:8080/api/v1/status
 {"status":"OK"}
 ```
-Please note that you need to replace with the actual port number where the server is running.
+Please note that you need to replace with the actual `port` number where the server is running.
 <br><br>
 ## Task[1]: My square
 I love geometry!
