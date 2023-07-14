@@ -34,6 +34,7 @@ def not_found(error):
  # Register the status function as a route.
 app.add_url_rule('/api/v1/status', view_func=status, methods=['GET'])
 
+
 if __name__ == "__main__":
     """python -m api.v1.app"""
     port = 5000  # Default port
