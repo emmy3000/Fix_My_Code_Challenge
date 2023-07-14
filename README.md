@@ -50,7 +50,7 @@ if __name__ == "__main__":
         port = 8080
 
     app.run(host="0.0.0.0", port=port, threaded=True)
-
+```
 
 * Imported the status function from views.index module.
 * Added the import statement for socket module.
