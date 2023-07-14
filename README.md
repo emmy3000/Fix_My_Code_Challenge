@@ -194,6 +194,6 @@ After making the above changes, you can run the following command to execute the
 root@f82226a41eb6:~/Fix_My_Code_Challenge# python3 user.py
 john@snow.com
 ```
-The code creates a User object, assigns the email "<u>"john@snow.com"</u>"  to it, and then prints the email value.
+The code creates a User object, assigns the email "<u>john@snow.com</u>"  to it, and then prints the email value.
 
 The corrected code now properly sets and retrieves the email value without any errors.
