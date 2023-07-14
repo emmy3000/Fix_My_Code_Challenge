@@ -48,7 +48,7 @@ if __name__ == "__main__":
 
     app.run(host="0.0.0.0", port=port, threaded=True)
 ```
-* Imported the `status` function from the `views.index module`.
+* Imported the `status` function from the `views.index` module.
 * Added the `import` statement for the `socket` module.
 * Updated the `port` configuration to use a default `port` of 5000.
 * Added code to check if the default `port` is already in use and switch to an alternative `port`(e.g., 8080).
