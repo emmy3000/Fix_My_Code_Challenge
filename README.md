@@ -237,8 +237,8 @@ Blog application:
 
 ## Admin account
 
-- email: hbtn@hbtn.io
-- password: toto1234
+- email: `hbtn@hbtn.io`
+- password: `toto1234`
 ```
 
 Examine the routes and controller methods:
@@ -356,9 +356,7 @@ OR
 ```bash
 rails s
 ```
-<br>
 Server starts without errors.
-
 ```bash
 Puma starting in single mode...
 * Version 3.12.6 (ruby 2.7.6-p219), codename: Llamas in Pajamas
@@ -369,7 +367,7 @@ Use Ctrl-C to stop
 
 ```
 <br>
-Execute the `curl` command with the hosts IP address and default port 3000 to find out if connection can be established.
+Execute the `curl` command with the `Hostname` or `IP Address` and default `port 3000` as arguments to find out if connection can be established.
 <br>
 
 ```bash
