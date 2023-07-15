@@ -198,6 +198,7 @@ The corrected code now properly sets and retrieves the email value without any e
 <br><br>
 
 ## Task[3]: Blog access
+
 I finished and deployed my Rails blog but people are contacting me because they can’t access any of my blog posts… Weird, it works for me…
 
 Could you take a look and fix it? My code base is [here](https://github.com/alx-tools/0x01-Fix_My_Code_Challenge/tree/master/blog).
@@ -214,6 +215,7 @@ Thank you!
 This can be found in the blog/README.md file
 
 In README.md
+
 ```markdown
 # README
 
@@ -235,12 +237,13 @@ Blog application:
 
 ## Admin account
 
-- email: `hbtn@hbtn.io`
-- password: `toto1234`
+- email: hbtn@hbtn.io
+- password: toto1234
 ```
 
 Examine the routes and controller methods:
 * Open the `routes.rb` file located at `config/routes.rb`.
+
 ```ruby
 Rails.application.routes.draw do
   devise_for :users
@@ -255,11 +258,14 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about'
 end
 ```
+
 * Look for the routes related to blog posts usually defined using the resources keyword or individually.
 * Ensure that the routes are defined correctly with appropriate HTTP methods `GET`, `POST`, `PATCH`, `DELETE` and point to the correct controller actions.
 <br>
+
 Verify controller actions:
 * Open the `PostsController` file located at `app/controllers/posts_controller.rb`.
+
 ```ruby
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
@@ -314,6 +320,7 @@ class PostsController < ApplicationController
   end
 end
 ```
+
 * Check the controller methods related to displaying blog posts, such as `index`, `show`, and `new`.
 * Make sure they are implemented correctly.
 * Ensure that any necessary instance variables are set and the correct views are rendered as shown from line 1 - 6.
@@ -325,6 +332,7 @@ Verify views:
 * Ensure that any required instance variables are correctly referenced in the views.
 
 In **index.html.erb**
+
 ```html
 <h1>Blog Posts</h1>
 
@@ -333,19 +341,24 @@ In **index.html.erb**
   <p><%= post.body %></p>
 <% end %>
 ```
+
 By carefully reviewing the `routes`, `controller` methods, and `views`, you can identify any potential issues that may be causing the access problem for your blog posts.
 
 ### Output
 Execute the ruby on rails command to spring up the server:
+
 ```bash
 rails server
 ```
+
 OR
+
 ```bash
 rails s
 ```
 <br>
 Server starts without errors.
+
 ```bash
 Puma starting in single mode...
 * Version 3.12.6 (ruby 2.7.6-p219), codename: Llamas in Pajamas
@@ -355,7 +368,10 @@ Puma starting in single mode...
 Use Ctrl-C to stop
 
 ```
+<br>
 Execute the `curl` command with the hosts IP address and default port 3000 to find out if connection can be established.
+<br>
+
 ```bash
 root@f82226a41eb6:~/Fix_My_Code_Challenge# curl http://0.0.0.0:3000
 <!DOCTYPE html>
@@ -423,6 +439,8 @@ root@f82226a41eb6:~/Fix_My_Code_Challenge# curl http://0.0.0.0:3000
 <br>
 
 Check the server's status for success or failure in connection establishment:
+<br>
+
 ```bash
 root@f82226a41eb6:~/Fix_My_Code_Challenge/blog/config# rails server
 Puma starting in single mode...
@@ -441,4 +459,5 @@ Processing by PostsController#index as */*
 Completed 200 OK in 1797ms (Views: 1695.5ms | ActiveRecord: 0.5ms)
 
 ```
+
 From the output it shows a status code of 200 which indicates that connection was successfully established.
