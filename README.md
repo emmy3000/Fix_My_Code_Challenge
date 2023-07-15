@@ -350,9 +350,7 @@ Execute the ruby on rails command to spring up the server:
 ```bash
 rails server
 ```
-
 OR
-
 ```bash
 rails s
 ```
@@ -367,7 +365,7 @@ Use Ctrl-C to stop
 
 ```
 <br>
-Execute the `curl` command with the `Hostname` or `IP Address` and default `port 3000` as arguments to find out if connection can be established.
+Execute the `curl` command with the Hostname or IP Address and default port 3000 as arguments to find out if connection can be established.
 <br>
 
 ```bash
@@ -458,4 +456,4 @@ Completed 200 OK in 1797ms (Views: 1695.5ms | ActiveRecord: 0.5ms)
 
 ```
 
-From the output it shows a status code of 200 which indicates that connection was successfully established.
+From the output it shows a status code of 200 indicating that the connection was successfully established.
